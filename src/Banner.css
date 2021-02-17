@@ -1,0 +1,7 @@
+.banner {
+  position: relative;
+  height: 448px;
+  color: white;
+  /* object fit makes image responsive */
+  object-fit: contain;
+}
