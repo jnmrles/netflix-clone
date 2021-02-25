@@ -56,3 +56,10 @@
   background-color: #e6e6e6;
   transition: all 0.4s;
 }
+
+.details__title {
+  font-size: 45px;
+  color: #ffff;
+  display: flex;
+  margin-right: auto;
+}
