@@ -1,6 +1,6 @@
 .content {
   left: 0;
-  height: 50vh;
+  height: 38vh;
   position: relative;
 }
 
@@ -37,7 +37,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 40px;
+  margin-left: 30px;
+  padding-top: 140px;
 }
 
 .image {
