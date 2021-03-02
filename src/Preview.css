@@ -1,42 +1,46 @@
-section {
-  top: -40px;
-  display: flex;
-  flex-direction: row;
-  font-family: sans-serif;
-  height: 37vh;
-}
-
-.paragraph {
-  color: #555;
-  display: flex;
-  flex-direction: column;
-}
-
 .content {
-  padding: 20px;
+  left: 0;
+  height: 40vh;
+  position: relative;
 }
 
-.title {
-  font-size: 24px;
-  color: #222;
-  line-height: 24px;
-}
-
-.preview__image {
-  top: -40px;
-  width: 100%;
+.background {
+  display: flex;
   height: 100%;
-
-  background: linear-gradient(to left, #333, #333 50%, #eee 100%);
 }
 
-.banner--fadeBottom {
-  height: 7.4rem;
-  background-image: linear-gradient(
-    180deg,
-    transparent,
-    rgba(37, 37, 37, 0.61),
-    #111
-  );
-  z-index: 1;
+.left {
+  background: black;
+  width: 30%;
+  position: relative;
+}
+
+.left:before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, #000, transparent);
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 275px;
+}
+
+.right {
+  width: 70%;
+  height: 100%;
+}
+
+.content-container {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: 30px;
+  padding-top: 100px;
+}
+
+.image {
+  position: relative;
 }

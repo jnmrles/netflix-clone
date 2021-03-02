@@ -1,45 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Preview.css";
-function Preview(props) {
-  const [closed, setClosed] = useState(false);
-  const movie = props.movie;
-
+function Preview({ movie }) {
   const base_url = "https://image.tmdb.org/t/p/original/";
 
-  return closed === false ? (
-    <>
-      <section class="section">
-        <div class="content">
-          <h2 class="title">This is a title</h2>
-          <p class="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At non ex
-            earum, libero dignissimos voluptates. Quis beatae dolorem autem
-            ipsa!
-          </p>
-        </div>
-        {/* <img
-          className="image"
-          key={movie.id}
-          src={`${base_url}${
-            movie.poster_path ? movie.poster_path : movie.backdrop_path
-          }`}
-          alt={movie.name}
-        /> */}
-        <div className="banner--fadeBottom"></div>
+  function truncate(string, end) {
+    return string?.length > end ? string.substr(0, end - 1) + "..." : string;
+  }
+  return (
+    <div class="content">
+      <div class="background">
+        <div class="left"></div>
         <div
-          className="preview__image"
+          class="right"
           style={{
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${
-              movie.poster_path ? movie.poster_path : movie.backdrop_path
-            }")`,
-            backgroundPosition: "center",
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
             backgroundSize: "cover",
-            backgroundRpeat: "no-repeat",
+            backgroundPosition: "center center",
           }}
         ></div>
-      </section>
-    </>
-  ) : null;
+      </div>
+      <div class="content-container">
+        <h1 className="banner__title">
+          {movie?.name || movie?.title || movie?.original_name}
+        </h1>
+        <div className="banner__buttons">
+          <button className="banner__button">Play</button>
+          <button className="banner__button">My List</button>
+        </div>
+        <h1 className="banner__description">
+          {truncate(movie?.overview, 300)}
+        </h1>
+      </div>
+    </div>
+  );
 }
 
 export default Preview;

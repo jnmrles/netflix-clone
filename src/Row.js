@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Row.css";
 import axios from "./axios";
 import Preview from "./Preview";
-import Test from "./Test";
+
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [viewPreview, setViewPreview] = useState(false);
@@ -50,7 +50,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
             )
         )}
       </div>
-      {!viewPreview ? null : <Test movie={movie} />}
+      {!viewPreview ? null : <Preview movie={movie} />}
     </div>
   );
 }
