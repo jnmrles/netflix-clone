@@ -75,12 +75,12 @@
   margin: 20px;
 }
 .login__input > form > input {
-  padding: 10px;
   outline-width: 0;
   height: 30px;
-  width: 30%;
   border: none;
   max-width: 600px;
+  padding: 10px 5px;
+  width: 40%;
 }
 .login__getButton {
   padding: 16px 25px;

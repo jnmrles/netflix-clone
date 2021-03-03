@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 function Login() {
+  const [signIn, setSignIn] = useState(false);
+
   return (
     <div className="login">
       <div className="login__background">
@@ -9,7 +11,9 @@ function Login() {
           src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
           alt="netflix"
         ></img>
-        <button className="login__button">Sign In</button>
+        <button className="login__button" onClick={() => setSignIn(true)}>
+          Sign In
+        </button>
         <div className="login__gradient"></div>
       </div>
 
@@ -24,7 +28,12 @@ function Login() {
           <div className="login__input">
             <form>
               <input type="email" placeholder="Email Address" />
-              <button className="login__getButton">Get Started</button>
+              <button
+                className="login__getButton"
+                onClick={(e) => (e.preventDefault(), setSignIn(true))}
+              >
+                Get Started
+              </button>
             </form>
           </div>
         </>
