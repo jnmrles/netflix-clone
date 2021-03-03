@@ -30,3 +30,16 @@
   cursor: pointer;
   margin-top: 20px;
 }
+
+.signupScreen > form > h1 {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.signupScreen > form > h4 {
+  text-align: left;
+  margin-top: 30px;
+}
+.grey__highlight {
+  color: gray;
+}
