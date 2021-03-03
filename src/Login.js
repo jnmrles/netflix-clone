@@ -17,6 +17,16 @@ function Login() {
         <>
           <h1>Unlimited films, TV programs and more.</h1>
           <h2>Watch anywhere. Cancel at any time.</h2>
+          <h3>
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </h3>
+          <div className="login__input">
+            <form>
+              <input type="email" placeholder="Email Address" />
+              <button className="login__getButton">Get Started</button>
+            </form>
+          </div>
         </>
       </div>
     </div>
