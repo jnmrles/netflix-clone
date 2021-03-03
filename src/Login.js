@@ -9,7 +9,7 @@ function Login() {
           src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
           alt="netflix"
         ></img>
-        <button className="">Sign In</button>
+        <button className="login__button">Sign In</button>
       </div>
     </div>
   );
