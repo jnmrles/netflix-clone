@@ -10,7 +10,11 @@ function Login() {
           alt="netflix"
         ></img>
         <button className="login__button">Sign In</button>
-        <div className="login__gradient">hello</div>
+        <div className="login__gradient"></div>
+
+        <div className="login__body">
+          <h1>Unlimited films, TV programs and more.</h1>
+        </div>
       </div>
     </div>
   );
