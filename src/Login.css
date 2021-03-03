@@ -38,3 +38,14 @@
     rgba(0, 0, 0, 0.8) 100%
   );
 }
+
+.login__body {
+  z-index: 1;
+  color: #fff;
+  padding: 20px;
+}
+
+.login_body > h1 {
+  font-size: 3.125rem;
+  margin-bottom: 20px;
+}
