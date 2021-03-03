@@ -15,7 +15,7 @@ function Login() {
 
       <div className="login__body">
         <>
-          <h1>Unlimited films, TV programs and more.</h1>
+          <h1>Unlimited Movies, TV Shows, and more.</h1>
           <h2>Watch anywhere. Cancel at any time.</h2>
           <h3>
             Ready to watch? Enter your email to create or restart your

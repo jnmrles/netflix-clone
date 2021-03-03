@@ -71,6 +71,9 @@
   font-weight: 400;
 }
 
+.login__input {
+  margin: 20px;
+}
 .login__input > form > input {
   padding: 10px;
   outline-width: 0;
@@ -78,4 +81,17 @@
   width: 30%;
   border: none;
   max-width: 600px;
+}
+.login__getButton {
+  padding: 16px 25px;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  background-color: #e50914;
+  font-weight: 600;
+  cursor: pointer;
+  outline-width: 0;
+  min-height: 50px;
+  position: relative;
+  vertical-align: middle;
 }
