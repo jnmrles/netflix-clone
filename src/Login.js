@@ -14,7 +14,10 @@ function Login() {
       </div>
 
       <div className="login__body">
-        <h1>Unlimited films, TV programs and more.</h1>
+        <>
+          <h1>Unlimited films, TV programs and more.</h1>
+          <h2>Watch anywhere. Cancel at any time.</h2>
+        </>
       </div>
     </div>
   );
