@@ -43,3 +43,8 @@
 .grey__highlight {
   color: gray;
 }
+
+.link__highlight:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
