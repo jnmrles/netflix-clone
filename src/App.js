@@ -6,11 +6,13 @@ import Login from "./Login";
 import { auth } from "./firebase";
 function App() {
   useEffect(() => {
-    auth.onAuthStateChanged((userAuth) => {
+    const unsubsrube = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
         console.log(userAuth);
       } else {
       }
+
+      return unsubsrube;
     });
   }, []);
   return (
