@@ -19,3 +19,7 @@ export const userSlice = createSlice({
 export const { login, logout } = userSlice.actions;
 
 // these functions below are selectors. allows to get value from state
+
+export const selectUser = (state) => state.user.value;
+
+export default userSlice.reducer;
