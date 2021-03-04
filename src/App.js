@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./Login";
 import { auth } from "./firebase";
 function App() {
+  const user = null;
   useEffect(() => {
     const unsubsrube = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
@@ -18,14 +19,15 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/">
-            <HomeScreen />
-          </Route>
-        </Switch>
+        {!user ? (
+          <Login />
+        ) : (
+          <Switch>
+            <Route path="/">
+              <HomeScreen />
+            </Route>{" "}
+          </Switch>
+        )}
       </Router>
     </div>
   );
