@@ -7,7 +7,7 @@ import Login from "./Login";
 import { auth } from "./firebase";
 import { login, logout } from "./features/userSlice";
 function App() {
-  const user = null;
+  const user = true;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,6 +29,9 @@ function App() {
           <Login />
         ) : (
           <Switch>
+            <Route>
+              <ProfileScreen />
+            </Route>
             <Route path="/">
               <HomeScreen />
             </Route>{" "}
