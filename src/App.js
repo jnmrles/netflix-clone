@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./Login";
 import { auth } from "./firebase";
 import { login, logout } from "./features/userSlice";
+import ProfileScreen from "./ProfileScreen";
 function App() {
   const user = true;
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ function App() {
           <Login />
         ) : (
           <Switch>
-            <Route>
+            <Route path="/profile">
               <ProfileScreen />
             </Route>
             <Route path="/">
