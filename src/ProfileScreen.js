@@ -19,16 +19,19 @@ function ProfileScreen() {
             src="https://pbs.twimg.com/profile_images/1240119990411550720/hBEe3tdn_400x400.png"
             alt=""
           />
-        </div>
-        <div className="profileScreen__details">
-          <h2>{user?.email}</h2>
-          <div className="profileScreen__plans">
-            <button
-              onClick={() => auth.signOut()}
-              className="profileScreen__signOut"
-            >
-              Sign Out
-            </button>
+
+          <div className="profileScreen__details">
+            <h2>{user?.email}</h2>
+            <div className="profileScreen__plans">
+              <h3>Plans</h3>
+              <p>No Active Subscriptions</p>
+              <button
+                onClick={() => auth.signOut()}
+                className="profileScreen__signOut"
+              >
+                Sign Out
+              </button>
+            </div>
           </div>
         </div>
       </div>
