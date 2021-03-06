@@ -20,6 +20,5 @@ export const { login, logout } = userSlice.actions;
 
 // these functions below are selectors. allows to get value from state
 
-export const selectUser = (state) => state.user.value;
-
+export const selectUser = (state) => state.user.user;
 export default userSlice.reducer;

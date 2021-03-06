@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import HomeScreen from "./HomeScreen";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./Login";
 import { auth } from "./firebase";
-import { login, logout } from "./features/userSlice";
+import { login, logout, selectUser } from "./features/userSlice";
 import ProfileScreen from "./ProfileScreen";
 function App() {
-  const user = true;
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
+
+  console.log("user", user);
 
   useEffect(() => {
     const unsubsrube = auth.onAuthStateChanged((userAuth) => {
@@ -19,10 +21,9 @@ function App() {
       } else {
         dispatch(logout);
       }
-
-      return unsubsrube;
     });
-  }, []);
+    return unsubsrube;
+  }, [dispatch]);
   return (
     <div className="app">
       <Router>
