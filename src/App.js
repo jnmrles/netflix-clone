@@ -19,7 +19,7 @@ function App() {
         console.log(userAuth);
         dispatch(login({ uid: userAuth.uid, email: userAuth.email }));
       } else {
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     return unsubsrube;

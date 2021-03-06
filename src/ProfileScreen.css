@@ -1,0 +1,27 @@
+.profileScreen {
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.profileScreem__body {
+  display: flex;
+  flex-direction: column;
+  width: 50% !important;
+  margin: 0 auto !important;
+  float: none !important;
+  padding-top: 8%;
+  max-width: 800px;
+}
+
+/* .profileScreem__body > h1 {
+  text-align: left;
+
+  position: absolute;
+  margin-left: auto;
+  margin-right: 50%;
+} */
+
+.profileScreen__info {
+  display: flex;
+}
