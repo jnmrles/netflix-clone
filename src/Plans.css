@@ -18,3 +18,7 @@
   border: none;
   cursor: pointer;
 }
+
+.plans_singlePlan--disabled > button {
+  background-color: gray;
+}

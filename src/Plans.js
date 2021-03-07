@@ -8,6 +8,8 @@ function Plans() {
   const [products, setProducts] = useState([]);
   const user = useSelector(selectUser);
   const [sub, setSub] = useState(null);
+  const dte = new Date(sub?.current_period_end * 1000).toDateString();
+  console.log(dte);
   useEffect(() => {
     db.collection("customers")
       .doc(user.uid)
@@ -15,7 +17,6 @@ function Plans() {
       .get()
       .then((querySnapShot) => {
         querySnapShot.forEach(async (subscription) => {
-          console.log("DATA", subscription.data());
           setSub({
             role: subscription.data().role,
             current_period_end: subscription.data().current_period_end.seconds,
@@ -25,7 +26,7 @@ function Plans() {
         });
       });
   }, [user.uid]);
-  console.log("SUB", sub);
+
   useEffect(() => {
     db.collection("products")
       .where("active", "==", true)
@@ -73,23 +74,30 @@ function Plans() {
 
   return (
     <div className="Plans">
+      {sub && <p>Renewal Date: {dte}</p>}
       {Object.entries(products).map((product) => {
         //Add logic to see if theres an active sub
         const id = product[0];
         const data = product[1];
+        const isCurrentSub = data.name?.toLowerCase().includes(sub?.role);
 
         return (
-          <div key={id} className="plans_singlePlan">
+          <div
+            key={id}
+            className={`${
+              isCurrentSub && "disable plans_singlePlan--disabled"
+            } plans_singlePlan`}
+          >
             <div className="plans_info">
               <h5>{data.name}</h5>
               <h6>{data.description}</h6>
             </div>
             <button
               onClick={() => {
-                loadCheckout(data.prices.priceId);
+                !isCurrentSub && loadCheckout(data.prices.priceId);
               }}
             >
-              Subscribe
+              {isCurrentSub ? "Active Sub" : "Subscribe"}
             </button>
           </div>
         );
