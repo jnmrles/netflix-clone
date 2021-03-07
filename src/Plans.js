@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import db from "./firebase";
 import "./Plans.css";
+import { loadStripe } from "@stripe/stripe-js";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
 function Plans() {
   const [products, setProducts] = useState([]);
+  const user = useSelector(selectUser);
 
   useEffect(() => {
     db.collection("products")
@@ -24,7 +28,30 @@ function Plans() {
       });
   }, []);
 
-  const loadCheckout = async (priceId) => {};
+  const loadCheckout = async (priceId) => {
+    const docRef = await db
+      .collection("customers")
+      .doc(user.uid)
+      .collection("checkout_sessions")
+      .add({
+        price: priceId,
+        success_url: window.location.origin,
+        cancel_url: window.location.origin,
+      });
+
+    docRef.onSnapshot(async (snap) => {
+      const { error, sessionId } = snap.data();
+      if (error) {
+        alert(`ERROR WITH MESSAGE: ${error.nessage} `);
+      }
+      if (sessionId) {
+        // We have a session, let's redirect to checkout
+        // Init Stripe
+        const stripe = await loadStripe("pk_test_teWRja4PyjtX2iWI4KrEqw6x");
+        await stripe.redirectToCheckout({ sessionId });
+      }
+    });
+  };
 
   return (
     <div className="Plans">
