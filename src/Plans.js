@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import db from "./firebase";
-
+import "./Plans.css";
 function Plans() {
   const [products, setProducts] = useState([]);
 
