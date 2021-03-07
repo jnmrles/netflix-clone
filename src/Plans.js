@@ -7,7 +7,25 @@ import { selectUser } from "./features/userSlice";
 function Plans() {
   const [products, setProducts] = useState([]);
   const user = useSelector(selectUser);
-
+  const [sub, setSub] = useState(null);
+  useEffect(() => {
+    db.collection("customers")
+      .doc(user.uid)
+      .collection("subscriptions")
+      .get()
+      .then((querySnapShot) => {
+        querySnapShot.forEach(async (subscription) => {
+          console.log("DATA", subscription.data());
+          setSub({
+            role: subscription.data().role,
+            current_period_end: subscription.data().current_period_end.seconds,
+            current_period_start: subscription.data().current_period_start
+              .seconds,
+          });
+        });
+      });
+  }, [user.uid]);
+  console.log("SUB", sub);
   useEffect(() => {
     db.collection("products")
       .where("active", "==", true)
