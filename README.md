@@ -1,15 +1,14 @@
 ## Netflix Clone with React.js
 
 
-A clone of Netlfix's User Dashboard in which users can creat accounts, start a test mode subscription, and preview movies, built with React, Redux, JavaScript, and CSS.
+A clone of Netlfix's User Dashboard built with React, Redux, JavaScript, and CSS.
+
+A User can currently create an account, manage account details, start a subscription, view the movie catalog, view a selected movie's details,
 
 ## Project Status
 
-Includes User Auth features, Subscription
+Video playback features are currently under development. Since we wont be able to show full length movies on this clone, I have decided to just include trailer playbacks in the selected movie detail's view.
 
-#### Example:
-
-This project is currently in development. Users can filter tweets by username and keyword and see visual data representation. Functionality to sort by additional parameters is in progress.
 
 ## Project Screen Shot(s)
 
