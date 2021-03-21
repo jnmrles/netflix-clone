@@ -48,6 +48,8 @@ I wanted to test my ability if I can develop a Web App as closely to Netflix and
 
 The technologies implemented in this project are React, React-Router 4.0, Redux, Firebase Firestore, Firebase Auth and a significant amount of VanillaJS, JSX, and CSS. The Clone has subscription functionalities and handles payments with Stripe's newly released Firebase Extension. I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time in diving into planning and building out the components needed to make the Web App look like Netflix.
 
+I plan to add playback features to preview trailers for any selected movie. Since I can playback full movies, I wont currently implement a Movie Viewer view and plan to utilize YouTube's API to retrieved a selected movie's trailer.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
