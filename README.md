@@ -3,7 +3,7 @@
 
 A clone of Netlfix's User Dashboard built with React, Redux, JavaScript, and CSS.
 
-A User can currently create an account, manage account details, start a subscription, view the movie catalog, view a selected movie's details,
+A User can currently create an account, manage account details, start a subscription, view the movie catalog, and view a selected movie's details.
 
 ## Project Status
 
