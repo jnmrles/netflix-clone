@@ -31,7 +31,7 @@ function Nav() {
 
         <img
           className="nav__avatar"
-          src="https://pbs.twimg.com/profile_images/1240119990411550720/hBEe3tdn_400x400.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
           alt="Netflix Logo"
           onClick={() => {
             history.push("/profile");
