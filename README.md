@@ -1,70 +1,57 @@
+## Netflix Clone with React.js
+
+
+A clone of Netlfix's User Dashboard built with React, Redux, JavaScript, and CSS.
+
+A User can currently create an account, manage account details, start a subscription, view the movie catalog, and view a selected movie's details.
+
+## Project Status
+
+Deployed Link: https://netflix-be4d1.web.app/
+
+Test Login: Netflix@testcom  password: Test1234
+
+Video playback features are currently under development. Since we wont be able to show full length movies on this clone, I have decided to just include trailer playbacks in the selected movie detail's view.
+
+
+## Project Screen Shot(s)
+
+
+
+## Installation and Setup Instructions
+
+ 
+Clone this repository. You will need `node` and `npm` installed globally on your machine.  
+
+Installation:
+
+`npm install`  
+
+To Run Test Suite:  
+
+`npm test`  
+
+To Start Server:
+
+`npm start`  
+
+To Visit App:
+
+`localhost:3000/`  
+
+## Reflection
+
+
+This was a 2 week long project that I built to attempt to clone Netflix. The overall goal was to utilize technologies I already knew and build up on them and familarizing myself with documentation for any new featues
+
+I wanted to test my ability if I can develop a Web App as closely to Netflix and allowing users to pull data from a Movie API.
+
+The technologies implemented in this project are React, React-Router 4.0, Redux, Firebase Firestore, Firebase Auth and a significant amount of VanillaJS, JSX, and CSS. The Clone has subscription functionalities and handles payments with Stripe's newly released Firebase Extension. I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time in diving into planning and building out the components needed to make the Web App look like Netflix.
+
+I plan to add playback features to preview trailers for any selected movie. Since I can playback full movies, I wont currently implement a Movie Viewer view and plan to utilize YouTube's API to retrieved a selected movie's trailer.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# netflix-clone
-# netflix-clone
